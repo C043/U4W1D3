@@ -7,20 +7,12 @@ public class Main {
         Articolo garpez = new Articolo("Gamba di legno", 100, 1);
         Articolo shampooSecco = new Articolo("Shampoo per cute sensibile", 5, 100);
 
-        Articolo[] listaSpesa = {garpez, shampooSecco};
+        Carrello carrelloAldo = new Carrello(aldo, new Articolo[0]);
 
-        Carrello carrelloAldo = new Carrello(aldo, listaSpesa);
-
+        carrelloAldo.addToCart(garpez);
         System.out.println(carrelloAldo);
 
-        Cliente giovanni = new Cliente("Giovanni", "Storti", "giovanni.storti@gmail.com");
-
-        Articolo biciclettaAmmaestrata = new Articolo("Bici che arriva al fischio", 1000, 1);
-
-        Articolo[] listaSpesaGiova = {biciclettaAmmaestrata};
-
-        Carrello carrelloGiova = new Carrello(giovanni, listaSpesaGiova);
-
-        System.out.println(carrelloGiova);
+        carrelloAldo.addToCart(shampooSecco);
+        System.out.println(carrelloAldo);
     }
 }

@@ -21,6 +21,18 @@ public class Carrello {
         return totale;
     }
 
+    public void addToCart(Articolo articolo) {
+        Articolo[] largerArray = new Articolo[elencoArticoli.length + 1];
+        for (int i = 0; i < largerArray.length; i++) {
+            if (i == largerArray.length - 1) {
+                largerArray[i] = articolo;
+            } else {
+                largerArray[i] = elencoArticoli[i];
+            }
+        }
+        this.elencoArticoli = largerArray;
+    }
+
     @Override
     public String toString() {
         return "Carrello{" +
