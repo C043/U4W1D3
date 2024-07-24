@@ -16,20 +16,8 @@ public class Articolo {
         this.pezziDisponibili = pezziDisponibili;
     }
 
-    public int getCodiceArticolo() {
-        return codiceArticolo;
-    }
-
-    public String getDescrizioneArticolo() {
-        return descrizioneArticolo;
-    }
-
     public double getPrezzo() {
         return prezzo;
-    }
-
-    public int getPezziDisponibili() {
-        return pezziDisponibili;
     }
 
     @Override

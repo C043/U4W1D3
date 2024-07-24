@@ -3,10 +3,10 @@ package Es2;
 import static java.lang.Integer.parseInt;
 
 public class Chiamata {
-    private int durata;
+    private double durata;
     private String numeroChiamato;
 
-    public Chiamata(int durata, long numeroChiamato) {
+    public Chiamata(double durata, long numeroChiamato) {
         this.durata = durata;
         this.numeroChiamato = Long.toString(numeroChiamato);
     }
@@ -14,5 +14,13 @@ public class Chiamata {
     public Chiamata(String durata, String numeroChiamato) {
         this.durata = parseInt(durata);
         this.numeroChiamato = numeroChiamato;
+    }
+
+    @Override
+    public String toString() {
+        return "Chiamata{" +
+                "durata=" + durata + " minuti" +
+                ", numeroChiamato='" + numeroChiamato + '\'' +
+                '}';
     }
 }
