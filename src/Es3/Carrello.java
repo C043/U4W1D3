@@ -13,7 +13,7 @@ public class Carrello {
         this.totaleCostoArticoli = sommaPrezzi(elencoArticoli);
     }
 
-    public double sommaPrezzi(Articolo[] array) {
+    private double sommaPrezzi(Articolo[] array) {
         double totale = 0;
         for (Articolo articolo : array) {
             totale += articolo.getPrezzo();
